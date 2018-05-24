@@ -1,6 +1,6 @@
-from datetime import datetime
 import email.utils
-from time import mktime
+from datetime import datetime
+
 
 class Item(object):
     """Parses an xml rss feed

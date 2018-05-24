@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-from bs4 import BeautifulSoup
-from datetime import datetime
 import email.utils
-from time import mktime
+from datetime import datetime
+
+from bs4 import BeautifulSoup
 
 from pyPodcastParser.Item import Item
 
 
-class Podcast():
+class Podcast(object):
     """Parses an xml rss feed
 
     RSS Specs http://cyber.law.harvard.edu/rss/rss.html
@@ -69,7 +69,6 @@ class Podcast():
     """
 
     def __init__(self, feed_content):
-        #super(Podcast, self).__init__()
         self.feed_content = feed_content
         self.set_soup()
         self.set_full_soup()
